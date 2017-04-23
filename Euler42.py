@@ -15,7 +15,7 @@ def reverseTriangle(score): # evaluates wether word score is a triangle number
 	return t
 
 def ctn(): #reads in words from file and calls previous two functions
-	txt = open('Euler42_words.txt', 'r')# returns the number of triangle words
+	txt = open('words.txt', 'r')# returns the number of triangle words
 	words = txt.read().split(',')
 	print words
 	count = 0
