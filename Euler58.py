@@ -7,7 +7,6 @@ def is_prime(n):
 	return True
 
 n = 7
-n0 = n
 primes = 8
 while primes/((2*n)-1) >= .10:
 	n += 2
