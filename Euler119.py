@@ -14,7 +14,7 @@ def sum_digits(n):
 # the resulting set had a cardinatlity > 30
 
 n = 7
-A = []
+A = set()
 while n < 100:
 	m = 2
 	a = n ** m
@@ -23,8 +23,8 @@ while n < 100:
 		a = n ** m
 		b = sum_digits(a)
 		if b > 1 and float(round(log(n, b), 10)).is_integer():
-			A.append(a)
+			A.add(a)
 		m += 1
 	n += 1
 
-print(sorted(A)[30])
+print(sorted(list(A))[29])
