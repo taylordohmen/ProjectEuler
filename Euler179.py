@@ -16,7 +16,7 @@ p, pset = primes(lim)
 facts = {}
 
 def factors(n):
-  global p, pset
+  global p, pset, facts
   f = {}
   i = 0
   m = 2

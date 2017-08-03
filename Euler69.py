@@ -3,28 +3,20 @@ from math import sqrt
 lim = 1000001
 
 def primes(n):
-	P = [2]
-	pset = {2}
-	p = 3
-	while len(P) < n:
-		i = 0
-		prime = True
-		s = sqrt(p)
-		while P[i] <= s:
-			if p % P[i] == 0:
-				prime = False
-				break
-			i += 1
-		if prime:
-			P.append(p)
-			pset.add(p)
-		p += 2
-	return P, pset
+	N = {n: True for n in range(3, n+1, 2)}
+	s = sqrt(n)
+	for i in range(3, int(s) + 1, 2):
+		if N[i]:
+			for j in range(i**2, n, 2*i):
+				N[j] = False
+	p = [n for n in N if N[n]]
+	p.insert(0,2)
+	return p, set(p)
 
-P, pset = primes(20 * int(sqrt(lim)) + 1)
+P, pset = primes(lim)
 
 def prime_factors(n):
-	global P
+	global P, pset
 	f = {}
 	i = 0
 	m = 2
