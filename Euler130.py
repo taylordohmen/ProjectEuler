@@ -1,12 +1,5 @@
 from math import sqrt
-
-def prime(n):
-  if n < 2: return False
-  if n == 2: return True
-  if n % 2 == 0: return False
-  for m in range(3, int(sqrt(n)) + 1, 2):
-    if n % m == 0: return False
-  return True
+from utils import is_prime
 
 def A(n):
   r = 111
@@ -21,7 +14,7 @@ def A(n):
 N = []
 n = 91
 while len(N) < 25:
-  if not prime(n) and (n-1) % A(n) == 0:
+  if not is_prime(n) and (n-1) % A(n) == 0:
     N.append(n)
   n += 2
   if n % 5 == 0:
