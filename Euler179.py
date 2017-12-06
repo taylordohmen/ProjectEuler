@@ -1,18 +1,8 @@
 from math import sqrt
-
-def primes(n):
-	N = {n: True for n in range(3, n+1, 2)}
-	s = sqrt(n)
-	for i in range(3, int(s) + 1, 2):
-		if N[i]:
-			for j in range(i**2, n, 2*i):
-				N[j] = False
-	p = [n for n in N if N[n]]
-	p.insert(0,2)
-	return p, set(p)
+from utils import primes_up_to
 
 lim = 10**7
-p, pset = primes(lim)
+p, pset = primes_up_to(lim)
 facts = {}
 
 def factors(n):
@@ -49,8 +39,6 @@ for n in range(2, lim):
   facts[n] = f
   facts[n+1] = f1
   if d == d1:
-    # print(n, n+1)
-    # print(f, f1)
     count += 1
 
 print(count)

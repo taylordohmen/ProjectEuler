@@ -1,15 +1,5 @@
 from math import sqrt
-
-def primes(n):
-	N = {i: True for i in range(3, n+1, 2)}
-	s = sqrt(n)
-	for i in range(3, int(s) + 1, 2):
-		if N[i]:
-			for j in range(i**2, n + 1, 2*i):
-				N[j] = False
-	p = [n for n in N if N[n]]
-	p.insert(0, 2)
-	return sorted(p)
+from utils import primes_up_to
 
 def match(n, m):
 	matches = 0
@@ -25,7 +15,7 @@ def match(n, m):
 
 lim = 1000009	
 sigma = 0
-p = primes(lim)[2:]
+p = primes_up_to(lim)[0][2:]
 for i in range(len(p) - 1):
 	p1, p2 = p[i], p[i+1]
 	j = 3

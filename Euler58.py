@@ -1,10 +1,5 @@
 from math import sqrt
-
-def is_prime(n):
-	for i in range(2, int(sqrt(n)) + 1):
-		if n % i == 0:
-			return False
-	return True
+from utils import is_prime
 
 n = 7
 primes = 8
@@ -19,4 +14,3 @@ while primes/((2*n)-1) >= .10:
 			primes += 1
 
 print(n)
-print(primes/((2*n)-1))

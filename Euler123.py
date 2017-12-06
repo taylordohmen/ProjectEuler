@@ -1,20 +1,5 @@
 from math import sqrt
-
-def primes(n):
-	P = [2]
-	p = 3
-	while len(P) < n:
-		i = 0
-		prime = True
-		while P[i] <= sqrt(p):
-			if p % P[i] == 0:
-				prime = False
-				break
-			i += 1
-		if prime:
-			P.append(p)
-		p += 2
-	return P
+from utils import primes
 
 def R(n, p):
 	return ((p[n]-1)**n + (p[n]+1)**n) % p[n]**2

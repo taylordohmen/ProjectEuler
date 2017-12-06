@@ -1,13 +1,6 @@
 import math
-def testPrime(n):
-	prime = True
-	if n == 1 or n == 0:
-		prime = False
-	for i in range(2,int(math.sqrt(n))+1):
-		if n % i == 0:
-			prime = False
-			break
-	return prime
+from utils import is_prime
+
 def testPerm(x,y):
 	z = str(x)
 	yesno = True
@@ -17,11 +10,12 @@ def testPerm(x,y):
 		else:
 			yesno = False
 	return yesno
+
 def primePermutations():
 	primes = []
 	x = 0
-	for i in xrange(1000,9999):
-		if testPrime(i) == True:
+	for i in range(1000,9999):
+		if is_prime(i) == True:
 			primes.append(i)
 	for j in primes:
 		if j+3330 in primes and j+6660 in primes and testPerm(j,j+3330) == True\
@@ -29,4 +23,5 @@ def primePermutations():
 			x = j
 			break
 	return str(j) + str(j+3330) + str(j+6660)
-print primePermutations()
+
+print(primePermutations())
