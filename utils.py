@@ -37,3 +37,11 @@ def primes(n):
 			P.append(p)
 		p += 2
 	return P
+
+# RETURN <set> of integer factors of n, 1 < f < n
+def factors(n):
+	f = set()
+	for m in range(2, int(sqrt(n)) + 1):
+		if n % m == 0:
+			f |= {m, n//m}
+	return f
