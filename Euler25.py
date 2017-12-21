@@ -11,4 +11,5 @@ def fibo(n):
 		z = y + x
 		count += 1
 	return count
-print fibo(1000)
+
+print(fibo(1000))

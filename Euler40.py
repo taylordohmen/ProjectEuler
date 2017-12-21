@@ -7,4 +7,5 @@ def champernowne():
 	for j in index:
 		product *= int(hold[j])
 	return product
-print champernowne()
+
+print(champernowne())

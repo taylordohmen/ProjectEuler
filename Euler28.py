@@ -8,4 +8,5 @@ def nsd(n):# n has got to be an odd number
 			x += inc
 		inc += 2
 	return summation + n**2
-print nsd(1001)
+
+print(nsd(1001))

@@ -4,7 +4,7 @@ txt.remove(txt[0])
 newTxt = []
 for i in txt:
 	newTxt.append(i[:len(i)-1])
-print newTxt
+
 def maxPathSum(pyramid):
 	sums = []
 	if len(pyramid) == 1:
@@ -28,6 +28,6 @@ def maxPathSum(pyramid):
 				newSums.append(sums[r+1])
 		pyramid[-1] = str(newSums)[1:-1]
 		pyramid[-1] = pyramid[-1].replace(',','')
-		print pyramid[-1]
 		return maxPathSum(pyramid)
-print maxPathSum(newTxt)
+
+print(maxPathSum(newTxt))

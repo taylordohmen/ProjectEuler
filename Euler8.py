@@ -14,4 +14,5 @@ def seriesProduct(n):
 		hold.remove(hold[0])
 		currentProduct = 1
 	return greatestProduct
-print seriesProduct(13)
+
+print(seriesProduct(13))

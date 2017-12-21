@@ -1,4 +1,5 @@
 import math
+
 def pythagTrip(m,n):
 	finish=0
 	a = n**2 - m**2
@@ -12,4 +13,5 @@ def pythagTrip(m,n):
 		b = 2 * n * m
 		c = math.hypot(a,b)
 	return a*b*c
-print pythagTrip(1,2)
+
+print(pythagTrip(1,2))

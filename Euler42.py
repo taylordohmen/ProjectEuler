@@ -17,10 +17,10 @@ def reverseTriangle(score): # evaluates wether word score is a triangle number
 def ctn(): #reads in words from file and calls previous two functions
 	txt = open('words.txt', 'r')# returns the number of triangle words
 	words = txt.read().split(',')
-	print words
 	count = 0
 	for i in words:
 		if reverseTriangle(wordScore(i)) == True:
 			count += 1
 	return count
-print ctn()
+
+print(ctn())

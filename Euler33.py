@@ -2,20 +2,17 @@
 numerators = [] #check out the problem to make sense of it at the end especially
 denominators = []
 
-for i in xrange(11,100):
-	for j in xrange(10, i):
+for i in range(11,100):
+	for j in range(10, i):
 		numerators.append(str(j))
 		denominators.append(str(i))
-
-print numerators
-print denominators
 
 numers = []
 denoms = []
 simpN = []
 simpD = []
 
-for k in xrange(len(numerators)):
+for k in range(len(numerators)):
 	if numerators[k][0] == denominators[k][0]:
 		numers.append(numerators[k])
 		denoms.append(denominators[k])
@@ -37,13 +34,8 @@ for k in xrange(len(numerators)):
 		simpN.append(numerators[k][0])
 		simpD.append(denominators[k][0])
 
-print numers
-print denoms
-print simpN
-print simpD
-
 dcf = []
-for n in xrange(len(numers)):
+for n in range(len(numers)):
 	if simpD[n] == '0':
 		continue
 	elif float(numers[n])/float(denoms[n]) == float(simpN[n])/float(simpD[n]) and float(numers[n])%float(simpN[n]) == 0:
@@ -54,7 +46,7 @@ for m in dcf:
 		pass
 	else:
 		newdcf.append(m)
-print newdcf
 x = 16*26*19*49 
 y = 64*65*95*98
-print float(x) / float(y)
+
+print(float(x) / float(y))

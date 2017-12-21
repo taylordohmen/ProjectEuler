@@ -1,5 +1,6 @@
 #runs between 16 and 18 seconds. Pretty slow...
 import itertools
+
 def substringDiv():
 	num = "1234567890"
 	x = list(itertools.permutations(num, len(num)))
@@ -15,4 +16,5 @@ def substringDiv():
 								if int(y[7:10]) % 17 == 0:
 									summation += int(y)
 	return summation
-print substringDiv()
+
+print(substringDiv())

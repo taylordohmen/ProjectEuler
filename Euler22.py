@@ -4,6 +4,7 @@ def wordScore(word):# finds word score
 	for i in word:
 		score += (alph.index(i) + 1)
 	return score
+
 def nameScores(): #alphabetizes and sums all scores
 	txt = open('Euler22_names.txt', 'r')
 	txt = txt.read().split(',')
@@ -14,4 +15,5 @@ def nameScores(): #alphabetizes and sums all scores
 		score = wordScore(i) * (txt.index(i) + 1)
 		totalScore += score
 	return totalScore
-print nameScores()
+
+print(nameScores())

@@ -7,10 +7,12 @@ def isPalindrome(x):
 	elif (number[0] == number[len(number) - 1]):
 		newNumber = number[1:len(number) - 1]
 		return isPalindrome(newNumber)
+
 def greatestPalindromeProduct(x):
 	for i in range(x, x - 100, -1):
 		product = x * i
 		if(isPalindrome(product) == True):
 			return product
 	return greatestPalindromeProduct(x - 1)
-print greatestPalindromeProduct(999)
+
+print(greatestPalindromeProduct(999))

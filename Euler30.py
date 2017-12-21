@@ -8,4 +8,5 @@ def digitFifthPowers(n):
 		if sum(hold) == i:
 			nums.append(i)
 	return sum(nums)
-print digitFifthPowers(5)
+
+print(digitFifthPowers(5))

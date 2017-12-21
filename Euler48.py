@@ -4,4 +4,5 @@ def selfPowers(n):
 		x.append(i**i)
 	y = str(sum(x))
 	return y[-10:]
-print selfPowers(1000)
+
+print(selfPowers(1000))

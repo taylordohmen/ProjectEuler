@@ -2,9 +2,10 @@ txt = open('Euler18.txt','r')
 txt = txt.readlines()
 txt.remove(txt[0])
 newTxt = []
+
 for i in txt:
 	newTxt.append(i[:len(i)-1])
-print newTxt
+
 def maxPathSum(pyramid): #pyramid is a list containing strings. each string is a line of the triangle
 	sums = []
 	if len(pyramid) == 1:
@@ -28,6 +29,6 @@ def maxPathSum(pyramid): #pyramid is a list containing strings. each string is a
 				newSums.append(sums[r+1])
 		pyramid[-1] = str(newSums)[1:-1]
 		pyramid[-1] = pyramid[-1].replace(',','')
-		print pyramid[-1]
 		return maxPathSum(pyramid)
-print maxPathSum(newTxt)
+
+print(maxPathSum(newTxt))

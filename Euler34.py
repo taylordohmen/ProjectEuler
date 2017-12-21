@@ -1,4 +1,5 @@
 import math
+
 def digitFactorials():
 	nums = []
 	for i in range(5,1000000,5):
@@ -8,4 +9,5 @@ def digitFactorials():
 		if sum(hold) == i:
 			nums.append(i)
 	return sum(nums)
-print digitFactorials()
+
+print(digitFactorials())

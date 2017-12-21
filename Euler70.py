@@ -1,5 +1,4 @@
 from utils import primes_up_to
-from math import sqrt
 
 lim = 10**7
 P, pset = primes_up_to(lim//2)
