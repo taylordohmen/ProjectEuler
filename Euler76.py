@@ -1,4 +1,4 @@
-def paritions(n, m, cache):
+def partitions(n, m, cache):
 	if m == 0:
 		return 0
 	if n == 0:
@@ -9,7 +9,7 @@ def paritions(n, m, cache):
 	if (n, m) in cache:
 		return cache[(n, m)]
 
-	cache[(n, m)] = paritions(n, m - 1, cache) + paritions(n - m, m, cache)
+	cache[(n, m)] = partitions(n, m - 1, cache) + partitions(n - m, m, cache)
 	return cache[(n, m)]
 
-print(paritions(100, 99, {}))
+print(partitions(100, 99, {}))
